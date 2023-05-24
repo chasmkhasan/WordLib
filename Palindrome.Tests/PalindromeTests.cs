@@ -1,4 +1,5 @@
 
+
 namespace Palindrome.Logic
 {
     [TestClass]
@@ -13,7 +14,7 @@ namespace Palindrome.Logic
         }
 
         [TestMethod]
-        public void IsPalindrome_WhenWhenStringIsPalindrome_ReturnsTrue()
+        public void IsPalindrome_WhenStringIsPalindrome_ReturnTrue()
         {
             var result = palindrome.IsPalindrome("dad");
 
@@ -21,20 +22,21 @@ namespace Palindrome.Logic
         }
 
         [TestMethod]
-        public void IsPalindrome_WhenWhenStringIsNotPalindrome_ReturnsFalse()
+        public void IsPalindrome_WhenStringIsNotPalindrome_ReturnFalse()
         {
             var result = palindrome.IsPalindrome("father");
 
             Assert.AreEqual(false, result);
         }
 
-        [TestMethod]
+        [DataTestMethod]
         [DataRow(null)]
         [DataRow("")]
         [ExpectedException(typeof(ArgumentException))]
-        public void IsPalindrome_WhenPassedNullOrEmptyValue_ThrowsArgumentException(string text)
+        public void IsPalindrome_WhenPassedValueIsNullOrEmpty_ThrowArgumentException(string parameter)
         {
-            var result = palindrome.IsPalindrome(text);
+            var result = palindrome.IsPalindrome(parameter);
+
         }
     }
 }
