@@ -21,4 +21,15 @@ namespace Palindrome.Logic
             return (text == newText) ? true : false;
         }
     }
+
+
+    //Root has not been generated in program.cs
+    public class Rooter
+    {
+        public double SquareRoot(double input)
+        {
+            return input / 2;
+        }
+
+    }
 }
